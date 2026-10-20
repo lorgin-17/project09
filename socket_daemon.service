@@ -1,0 +1,11 @@
+[Unit]
+Description=Figlet socket daemon
+
+[Service]
+User=carvita
+WorkingDirectory=/home/carvita/projects/project09
+ExecStart=/home/carvita/projects/project09/main --socket /home/carvita/projects/project09/daemon.socket
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
